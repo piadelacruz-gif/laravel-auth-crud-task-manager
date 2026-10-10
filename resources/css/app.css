@@ -13,3 +13,55 @@ input:not([type=checkbox]),textarea{width:100%;padding:12px 14px;border:1px soli
 .alert{padding:14px 18px;border-radius:10px;margin:15px 0}.alert.success{background:#e3f9ee;color:#116840}.alert.error{background:#ffeaf0;color:#ad263f}
 .guest-shell{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 20px}.auth-brand{margin-bottom:20px}.auth-card{width:min(450px,100%);padding:34px}.auth-card h1{font-size:27px}.auth-links,.form-bottom{display:flex;justify-content:space-between;gap:10px;margin-top:20px;font-size:13px}.auth-links a,.form-bottom a{color:var(--blue);font-weight:750}.footer{border-top:1px solid var(--border);padding:20px;text-align:center;color:var(--muted);font-size:12px}
 @media(max-width:800px){.columns,.stats{grid-template-columns:1fr}.nav-inner,.headline{flex-wrap:wrap}.nav-right{gap:12px;flex-wrap:wrap}.task{align-items:flex-start}.auth-card{padding:24px}}
+
+
+/* StudyFlow green and white theme — Laravel server-rendered views */
+:root{--bg:#f5faf7;--text:#192e22;--muted:#73877a;--blue:#18734e;--border:#dfece3;--shadow:0 14px 40px rgba(18,72,50,.07)}
+body{background:var(--bg)}
+.nav{border-bottom:1px solid #dfece3;background:#fff}
+.brand,.auth-brand{color:#146243}
+.brand span,.auth-brand span{color:#203e2d}
+.profile-pill,.count-chip{background:#e2f6eb;color:#1c6747}
+.eyebrow{color:#18734e;letter-spacing:2px}
+.stat,.card,.auth-card{border:1px solid #dfece3;border-radius:17px;box-shadow:0 14px 40px rgba(18,72,50,.06)}
+.stat strong{color:#124d37}
+.card h2{color:#173d2c}
+.button.primary{background:#18734e;border-color:#18734e;color:#fff}
+.button.primary:hover{background:#125d3e}
+.button.secondary{color:#176442;background:#eaf8ef;border-color:#cce7d6}
+input:not([type=checkbox]),textarea{border-color:#d2e5d7}
+input:focus,textarea:focus{outline:2px solid #a4dbb8;border-color:#238051}
+.filters a.active{background:#e5f5e9;color:#12623f}
+.filters a,.text-btn{color:#23734c}
+.task-marker.done,.status.completed{color:#167349}
+.status.completed{background:#e0f6e7}
+.nav-signout{color:#b33d46}
+.task-title{color:#1d4832}
+.task-title:hover{color:#18734e}
+/* Split-screen guest authentication (Blade / real Laravel routes) */
+body.auth-split{min-height:100vh;background:#f8fdf9;display:grid;grid-template-columns:minmax(340px,1fr) minmax(470px,1fr)}
+.auth-promo{min-height:100vh;padding:55px clamp(40px,5vw,90px);background:linear-gradient(145deg,#0c3c2a,#176d4e);color:white;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.auth-promo::after{content:"";position:absolute;width:490px;height:490px;border:83px solid rgba(231,255,231,.05);border-radius:50%;top:24%;right:-185px;pointer-events:none}
+.auth-promo .auth-brand{color:#fff;font-size:24px}
+.auth-promo .auth-brand span{color:#c5ead3}
+.auth-promo .promo-heading{position:relative;z-index:1}
+.auth-promo h1{font-size:clamp(36px,4.6vw,60px);line-height:1.12;letter-spacing:-2.1px;max-width:550px;margin:16px 0 20px}
+.auth-promo p{color:#c2e5d3;max-width:430px;line-height:1.8}
+.auth-promo .promotags{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.auth-promo .promotags span{border:1px solid #ffffff38;background:#ffffff15;border-radius:24px;padding:7px 12px;font-size:12px;color:#effff3}
+.auth-promo-footer{color:#b5d6c3;font-size:12px;position:relative;z-index:1}
+.auth-content{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:50px 25px;background:radial-gradient(circle at 100% 0%,#eaf8ef,transparent 50%),#fbfefb}
+.auth-panel{width:min(100%,460px)}
+.auth-panel>.eyebrow{margin-bottom:14px}
+.auth-panel h1{font-size:29px;margin-bottom:9px;letter-spacing:-.8px}
+.auth-panel>.muted{font-size:14px;margin-bottom:22px}
+.auth-panel .auth-card{padding:33px;border-radius:18px;background:white}
+.auth-panel .stack{margin:0;gap:19px}
+.auth-panel .stack label{font-size:13px;color:#42584b}
+.auth-panel .stack input:not([type=checkbox]),.auth-panel .stack textarea{padding:13px;border-radius:10px}
+.auth-panel .auth-links{gap:13px;line-height:1.5}
+.auth-panel .auth-links a,.auth-panel .form-bottom a{color:#126b43}
+.auth-panel .alert{margin-bottom:15px}
+.auth-panel .auth-footer{font-size:12px;color:#869b8a;text-align:center;margin-top:20px}
+@media(max-width:900px){body.auth-split{grid-template-columns:1fr}.auth-promo{min-height:190px;padding:25px 30px}.auth-promo h1{font-size:28px;max-width:none;letter-spacing:-.7px}.auth-promo p,.auth-promo .promotags,.auth-promo-footer{display:none}.auth-content{min-height:auto;padding:35px 20px}.auth-panel .auth-card{padding:24px}}
+@media(max-width:700px){.columns{grid-template-columns:1fr}.stats{gap:10px}.nav-right{gap:10px;flex-wrap:wrap}.headline{flex-wrap:wrap}}
