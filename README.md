@@ -60,3 +60,19 @@ The project contains tests for authentication, CRUD, validation and task ownersh
 ## Notes
 
 Do not run breeze:install again: customized Blade pages and authentication handlers are already included. Never publish .env or your local database. The uploaded PHP source was syntax-reviewed, but a fully running application and automated test suite have not been verified in a runtime with Composer and SQLite support.
+## Green-and-white interactive preview
+
+For a quick classroom interface demonstration, open **[demo/StudyFlow_Green_Auth_CRUD_Preview.html](demo/StudyFlow_Green_Auth_CRUD_Preview.html)**. Download the HTML file (using Raw → Save As or GitHub's Download ZIP) and open it in Chrome.
+
+Demo credentials:
+- Email: `demo@studyflow.test`
+- Password: `Demo1234!`
+
+The preview supports simulated registration, login, logout, task creation, editing, completion, deletion and filters. It runs entirely inside the browser using local storage, **not PHP, Laravel Breeze or SQLite**, and should not be used with real passwords.
+
+### Actual Laravel project
+
+The Laravel app uses its own routes, authenticated controllers, Blade views and database migrations, and now uses the same green-and-white theme. To demonstrate real Laravel authentication and database CRUD, you still need to install Composer/npm dependencies and run it locally. Source code is published, but runtime integration tests have not yet been performed.
+
+---
+
