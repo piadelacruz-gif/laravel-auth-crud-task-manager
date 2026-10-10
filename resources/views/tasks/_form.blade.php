@@ -1,0 +1,2 @@
+<label>Task title <input type="text" name="title" maxlength="255" required value="{{ old('title', $task->title ?? '') }}"></label>
+<label>Description <textarea name="description" rows="6">{{ old('description', $task->description ?? '') }}</textarea></label>
